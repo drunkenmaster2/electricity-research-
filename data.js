@@ -2,6 +2,14 @@ window.RESEARCH_DATA = {
   "meta": {"title":"חקירת צריכת החשמל — בלפור 67, דירה 5","updated":"5.9.2026","contract":"349268900","meter":"16024287","meter_model":"Holley DTS541","meter_code":"494","impulses":"1000 imp/kWh"},
   "summary": {"peak_bill_amount":4384.54,"peak_bill_kwh":6703,"peak_bill_daily":94.4,"boiler_june":1693.8,"boiler_july":1470.95,"boiler_aug":712.19,"boiler_power_kw":2.5,"ac_upper_power_kw":3.32,"sept_daily_avg":55.4},
   "boiler_monthly": [["מרץ",213.99],["אפר׳",184.55],["מאי",462.69],["יוני",1693.8],["יולי",1470.95],["אוג׳",712.19],["ספט׳*",95.9]],
+  "monthly_compare": [
+    {"month":"מרץ","total":692.0,"boiler":213.99,"boiler_share":30.9,"note":"כלל הבית — אומדן מחודשי לפי קצב חשבון 20.3–19.4"},
+    {"month":"אפר׳","total":761.83,"boiler":184.55,"boiler_share":24.2,"note":"אומדן מפוצל בין שני חשבונות"},
+    {"month":"מאי","total":951.70,"boiler":462.69,"boiler_share":48.6,"note":"אומדן לפי קצב חשבון 20.4–8.6"},
+    {"month":"יוני","total":2322.59,"boiler":1693.80,"boiler_share":72.9,"note":"אומדן מפוצל: 1–8.6 לפי החשבון הקודם, 9–30.6 לפי החשבון החריג"},
+    {"month":"יולי","total":2926.66,"boiler":1470.95,"boiler_share":50.3,"note":"אומדן לפי קצב חשבון 9.6–18.8"},
+    {"month":"אוג׳","total":2791.67,"boiler":712.19,"boiler_share":25.5,"note":"אומדן: 1–18.8 לפי החשבון, 19–31.8 לפי קצב קריאות 18.8–3.9"}
+  ],
   "bills": [
     {"period":"20.3–19.4","days":31,"kwh":692,"daily":22.3,"amount":499.1,"from":107737,"to":108429},
     {"period":"20.4–8.6","days":50,"kwh":1535,"daily":30.7,"amount":1060.43,"from":108429,"to":109964},

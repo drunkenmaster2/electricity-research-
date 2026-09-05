@@ -75,16 +75,24 @@ def month_shift(year: int, month: int, delta: int) -> tuple[int, int]:
 
 
 def flatten_energy(resp: dict) -> list[dict]:
-    result = resp.get("result")
-    if not isinstance(result, list):
+    result = resp.get("result") if isinstance(resp, dict) else None
+    # Energy Trend endpoint -> result is a list of {time,value}.
+    if isinstance(result, list):
+        source = result
+    # Time Series endpoint -> result is {list:[{date,value}], unit,...}.
+    elif isinstance(result, dict) and isinstance(result.get("list"), list):
+        source = result["list"]
+    else:
         return []
-    rows = []
-    for item in result:
-        if isinstance(item, dict):
-            time = item.get("time")
-            value = item.get("value")
-            if time is not None and value is not None:
-                rows.append({"time": str(time), "value": value})
+
+    rows: list[dict] = []
+    for item in source:
+        if not isinstance(item, dict):
+            continue
+        stamp = item.get("time", item.get("date"))
+        value = item.get("value")
+        if stamp is not None and value is not None:
+            rows.append({"time": str(stamp), "value": value})
     return rows
 
 
@@ -97,13 +105,52 @@ def merge_rows(path: Path, rows: list[dict]) -> list[dict]:
     return [merged[k] for k in sorted(merged)]
 
 
+def query_energy(api: TuyaOpenAPI, date_type: str, start: str, end: str) -> tuple[list[dict], list[dict]]:
+    """Try both documented Tuya energy-history APIs.
+
+    Returns (rows, errors). The first endpoint is the general IoT energy trend API.
+    If it fails or returns no rows, we fall back to the single-device time-series API
+    using the documented indicator code `ele_usage`.
+    """
+    errors: list[dict] = []
+
+    trend_path = "/v1.0/iot-03/energy/electricity/devices/statistics-trend"
+    trend_params = {
+        "energy_action": "consume",
+        "statistics_type": date_type,
+        "start_time": start,
+        "end_time": end,
+        "device_id": DEVICE_ID,
+    }
+    trend_resp = api.get(trend_path, trend_params)
+    trend_err = response_error(trend_resp)
+    trend_rows = [] if trend_err else flatten_energy(trend_resp)
+    if trend_err:
+        errors.append({"api": "statistics-trend", "error": trend_err})
+    if trend_rows:
+        return trend_rows, errors
+
+    timeseries_path = "/v1.0/m/energy/statistics/device/datadate"
+    body = {
+        "dev_id": DEVICE_ID,
+        "indicator_code": "ele_usage",
+        "date_type": date_type,
+        "begin_date": start,
+        "end_date": end,
+        "aggregation_type": "SUM",
+    }
+    timeseries_resp = api.post(timeseries_path, body)
+    timeseries_err = response_error(timeseries_resp)
+    timeseries_rows = [] if timeseries_err else flatten_energy(timeseries_resp)
+    if timeseries_err:
+        errors.append({"api": "device-datadate", "error": timeseries_err})
+    return timeseries_rows, errors
+
+
 def main() -> int:
     if not ACCESS_ID or not ACCESS_SECRET:
-        msg = "TUYA_ACCESS_ID / TUYA_ACCESS_SECRET are not configured"
-        print(msg)
-        if OPTIONAL:
-            return 0
-        return 2
+        print("TUYA_ACCESS_ID / TUYA_ACCESS_SECRET are not configured")
+        return 0 if OPTIONAL else 2
 
     now = datetime.now(TZ)
     meta = {
@@ -115,12 +162,14 @@ def main() -> int:
     }
 
     api = TuyaOpenAPI(ENDPOINT, ACCESS_ID, ACCESS_SECRET)
-    token = api.connect()
-    err = response_error(token)
-    if err:
-        meta["errors"].append({"stage": "connect", "error": err})
+    try:
+        # The official SDK's connect() is invoked for its side effect; callers should
+        # not assume a response payload is returned.
+        api.connect()
+    except Exception as exc:  # noqa: BLE001 - preserve cloud error in snapshot
+        meta["errors"].append({"stage": "connect", "error": repr(exc)})
         dump(OUT / "sync_meta.json", meta)
-        print(f"Tuya connect failed: {err}")
+        print(f"Tuya connect failed: {exc!r}")
         return 1
 
     calls = {
@@ -130,7 +179,10 @@ def main() -> int:
     }
     raw: dict[str, object] = {}
     for name, path in calls.items():
-        resp = api.get(path)
+        try:
+            resp = api.get(path)
+        except Exception as exc:  # noqa: BLE001
+            resp = {"success": False, "msg": repr(exc)}
         raw[name] = resp
         call_err = response_error(resp)
         if call_err:
@@ -146,26 +198,20 @@ def main() -> int:
     }
     dump(OUT / "latest.json", latest)
 
-    energy_path = "/v1.0/iot-03/energy/electricity/devices/statistics-trend"
-
-    # Daily history: Tuya documents a maximum of 7 days per request, last 90 days.
+    # Daily history: documented maximum span is 7 days per request, last 90 days.
     daily_rows: list[dict] = []
     cursor = now.date() - timedelta(days=89)
     while cursor <= now.date():
         chunk_end = min(cursor + timedelta(days=6), now.date())
-        params = {
-            "energy_action": "consume",
-            "statistics_type": "day",
-            "start_time": cursor.strftime("%Y%m%d"),
-            "end_time": chunk_end.strftime("%Y%m%d"),
-            "device_id": DEVICE_ID,
-        }
-        resp = api.get(energy_path, params)
-        call_err = response_error(resp)
-        if call_err:
-            meta["errors"].append({"stage": "energy_day", "range": [params["start_time"], params["end_time"]], "error": call_err})
-        else:
-            daily_rows.extend(flatten_energy(resp))
+        start = cursor.strftime("%Y%m%d")
+        end = chunk_end.strftime("%Y%m%d")
+        try:
+            rows, errors = query_energy(api, "day", start, end)
+        except Exception as exc:  # noqa: BLE001
+            rows, errors = [], [{"api": "energy-history", "error": repr(exc)}]
+        daily_rows.extend(rows)
+        for item in errors:
+            meta["errors"].append({"stage": "energy_day", "range": [start, end], **item})
         cursor = chunk_end + timedelta(days=1)
 
     if daily_rows:
@@ -173,27 +219,29 @@ def main() -> int:
         merged = merge_rows(daily_path, daily_rows)
         dump(daily_path, {"unit": "kWh", "statistics_type": "day", "data": merged, "updated_at": now.isoformat()})
 
-    # Monthly history: one request covers the latest 12 months.
+    # Monthly history: latest 12 months in one request.
     start_y, start_m = month_shift(now.year, now.month, -11)
-    month_params = {
-        "energy_action": "consume",
-        "statistics_type": "month",
-        "start_time": f"{start_y:04d}{start_m:02d}",
-        "end_time": f"{now.year:04d}{now.month:02d}",
-        "device_id": DEVICE_ID,
-    }
-    month_resp = api.get(energy_path, month_params)
-    month_err = response_error(month_resp)
-    if month_err:
-        meta["errors"].append({"stage": "energy_month", "error": month_err})
-    else:
+    month_start = f"{start_y:04d}{start_m:02d}"
+    month_end = f"{now.year:04d}{now.month:02d}"
+    try:
+        month_rows, month_errors = query_energy(api, "month", month_start, month_end)
+    except Exception as exc:  # noqa: BLE001
+        month_rows, month_errors = [], [{"api": "energy-history", "error": repr(exc)}]
+    for item in month_errors:
+        meta["errors"].append({"stage": "energy_month", **item})
+    if month_rows:
         monthly_path = OUT / "energy_monthly.json"
-        merged = merge_rows(monthly_path, flatten_energy(month_resp))
+        merged = merge_rows(monthly_path, month_rows)
         dump(monthly_path, {"unit": "kWh", "statistics_type": "month", "data": merged, "updated_at": now.isoformat()})
 
     meta["success"] = not any(x["stage"] in {"connect", "device", "status"} for x in meta["errors"])
+    meta["daily_rows_received"] = len(daily_rows)
+    meta["monthly_rows_received"] = len(month_rows)
     dump(OUT / "sync_meta.json", meta)
-    print(f"Tuya sync complete; {len(daily_rows)} daily energy rows received; errors={len(meta['errors'])}")
+    print(
+        f"Tuya sync complete; daily={len(daily_rows)}, monthly={len(month_rows)}, "
+        f"errors={len(meta['errors'])}"
+    )
     return 0 if meta["success"] else 1
 
 

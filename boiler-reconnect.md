@@ -21,6 +21,20 @@ Saved: 2026-09-05
 - Do **not** store the Smart Life password in this public repository.
 - The Smart Life screen also shows an account **User Code**; it is intentionally not copied here because this repository is public and the code may be account-sensitive.
 
+## Boiler / tank hardware
+
+Confirmed from the physical labels and photos:
+
+- **Manufacturer:** Chromagen (כרומגן)
+- **System:** solar water system with electric backup heating
+- **Tank type:** closed electric water heater / storage tank
+- **Nominal tank volume:** **150 L**
+- **Electric heating element:** **2,500 W (2.5 kW)**
+- **Serial number:** **4150829477**
+- Energy label references Israeli standard **ת״י 69.1, סעיף 4.5.1** for thermal losses.
+
+This hardware rating matches the meter experiment: when the boiler was heating, the measured incremental load was about **2.5 kW**.
+
 ## Why we are confident this is the boiler controller
 
 Smart Life shows MAC `a4:e5:7c:ab:b4:b8` for the device page `Electric`. In the Deco client list, the client `ESP_ABB4B8` appears under the **2.4 GHz** section. The suffix `ABB4B8` matches the final three bytes of the MAC address exactly.
@@ -33,6 +47,7 @@ So the best durable identifiers are:
 4. Virtual ID `20415515a4e57cabb4b8`
 5. Smart Life region `Israel`
 6. Linked email as masked in the app: `Ami****nziger@gmail.com`
+7. Chromagen tank, **150 L / 2.5 kW**, serial **4150829477**
 
 ## Reconnect checklist
 
@@ -47,7 +62,7 @@ So the best durable identifiers are:
 
 ## Still missing
 
-- Exact controller hardware/model number.
-- Exact pairing/reset procedure for this controller.
+- Exact Smart Life controller/switch hardware model number.
+- Exact pairing/reset procedure for the Smart Life controller.
 
-When we identify the controller model or pairing/reset steps, add those details here.
+The water tank itself is identified: Chromagen, 150 L, 2.5 kW, serial 4150829477.

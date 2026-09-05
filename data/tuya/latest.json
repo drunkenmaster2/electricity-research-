@@ -1,0 +1,28 @@
+{
+  "device_id": "20415515a4e57cabb4b8",
+  "normalized_status": {},
+  "raw": {
+    "device": {
+      "code": 28841002,
+      "msg": "No permissions. Your subscription to cloud development plan has expired.",
+      "success": false,
+      "t": 1788615000555,
+      "tid": "e4dddb3fa92d11f19da32e1e02062fcf"
+    },
+    "specification": {
+      "code": 28841002,
+      "msg": "No permissions. Your subscription to cloud development plan has expired.",
+      "success": false,
+      "t": 1788615000978,
+      "tid": "e538b0d5a92d11f19da32e1e02062fcf"
+    },
+    "status": {
+      "code": 28841002,
+      "msg": "No permissions. Your subscription to cloud development plan has expired.",
+      "success": false,
+      "t": 1788615000844,
+      "tid": "e50ae2cca92d11f19ea6f28f09c62a14"
+    }
+  },
+  "synced_at": "2026-09-05T16:29:59.924484+03:00"
+}

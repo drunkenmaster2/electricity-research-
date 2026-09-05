@@ -1,0 +1,267 @@
+{
+  "daily_rows_received": 0,
+  "device_id": "20415515a4e57cabb4b8",
+  "endpoint": "https://openapi.tuyaeu.com",
+  "errors": [
+    {
+      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "stage": "device"
+    },
+    {
+      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "stage": "status"
+    },
+    {
+      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "stage": "specification"
+    },
+    {
+      "api": "statistics-trend",
+      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "range": [
+        "20260608",
+        "20260614"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "device-datadate",
+      "error": "token invalid",
+      "range": [
+        "20260608",
+        "20260614"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "statistics-trend",
+      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "range": [
+        "20260615",
+        "20260621"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "device-datadate",
+      "error": "token invalid",
+      "range": [
+        "20260615",
+        "20260621"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "statistics-trend",
+      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "range": [
+        "20260622",
+        "20260628"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "device-datadate",
+      "error": "token invalid",
+      "range": [
+        "20260622",
+        "20260628"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "statistics-trend",
+      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "range": [
+        "20260629",
+        "20260705"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "device-datadate",
+      "error": "token invalid",
+      "range": [
+        "20260629",
+        "20260705"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "statistics-trend",
+      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "range": [
+        "20260706",
+        "20260712"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "device-datadate",
+      "error": "token invalid",
+      "range": [
+        "20260706",
+        "20260712"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "statistics-trend",
+      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "range": [
+        "20260713",
+        "20260719"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "device-datadate",
+      "error": "token invalid",
+      "range": [
+        "20260713",
+        "20260719"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "statistics-trend",
+      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "range": [
+        "20260720",
+        "20260726"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "device-datadate",
+      "error": "token invalid",
+      "range": [
+        "20260720",
+        "20260726"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "statistics-trend",
+      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "range": [
+        "20260727",
+        "20260802"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "device-datadate",
+      "error": "token invalid",
+      "range": [
+        "20260727",
+        "20260802"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "statistics-trend",
+      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "range": [
+        "20260803",
+        "20260809"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "device-datadate",
+      "error": "token invalid",
+      "range": [
+        "20260803",
+        "20260809"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "statistics-trend",
+      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "range": [
+        "20260810",
+        "20260816"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "device-datadate",
+      "error": "token invalid",
+      "range": [
+        "20260810",
+        "20260816"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "statistics-trend",
+      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "range": [
+        "20260817",
+        "20260823"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "device-datadate",
+      "error": "token invalid",
+      "range": [
+        "20260817",
+        "20260823"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "statistics-trend",
+      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "range": [
+        "20260824",
+        "20260830"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "device-datadate",
+      "error": "token invalid",
+      "range": [
+        "20260824",
+        "20260830"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "statistics-trend",
+      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "range": [
+        "20260831",
+        "20260905"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "device-datadate",
+      "error": "token invalid",
+      "range": [
+        "20260831",
+        "20260905"
+      ],
+      "stage": "energy_day"
+    },
+    {
+      "api": "statistics-trend",
+      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "stage": "energy_month"
+    },
+    {
+      "api": "device-datadate",
+      "error": "token invalid",
+      "stage": "energy_month"
+    }
+  ],
+  "monthly_rows_received": 0,
+  "success": false,
+  "synced_at": "2026-09-05T16:29:59.924484+03:00",
+  "timezone": "Asia/Jerusalem"
+}

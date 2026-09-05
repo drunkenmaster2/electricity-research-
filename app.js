@@ -9,6 +9,17 @@ document.getElementById('kpis').innerHTML=[
   ['~'+fmt(S.boiler_power_kw)+' kW','הספק דוד בזמן חימום','נמדד מהבהובי המונה']
 ].map(x=>`<div class="kpi"><div class="v">${x[0]}</div><div class="l">${x[1]}</div><div class="small">${x[2]}</div></div>`).join('');
 document.getElementById('findings').innerHTML=D.findings.map(f=>`<div class="finding"><strong>${f.title}<span class="confidence ${f.confidence==='בינוני'?'med':''}">${f.confidence}</span></strong><div>${f.text}</div></div>`).join('');
+
+const maxCompare=Math.max(...D.monthly_compare.map(x=>x.total));
+document.getElementById('compareChart').innerHTML=D.monthly_compare.map(x=>`<div class="month-group" title="${x.note}">
+  <div class="month-bars">
+    <div class="compare-bar total" style="height:${Math.max(5,x.total/maxCompare*100)}%"><span class="compare-val">${fmt(Math.round(x.total))}</span></div>
+    <div class="compare-bar boiler" style="height:${Math.max(5,x.boiler/maxCompare*100)}%"><span class="compare-val">${fmt(Math.round(x.boiler))}</span></div>
+  </div>
+  <div class="month-label">${x.month}</div>
+  <div class="share-label">דוד ${fmt(x.boiler_share)}%</div>
+</div>`).join('');
+
 const maxB=Math.max(...D.boiler_monthly.map(x=>x[1]));
 document.getElementById('boilerChart').innerHTML=D.boiler_monthly.map((x,i)=>`<div class="bar ${i===D.boiler_monthly.length-1?'partial':''}" style="height:${Math.max(5,x[1]/maxB*100)}%"><span class="val">${fmt(x[1])}</span><span class="label">${x[0]}</span></div>`).join('');
 const maxBill=Math.max(...D.bills.map(x=>x.daily));

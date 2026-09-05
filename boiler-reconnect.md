@@ -26,14 +26,21 @@ Saved: 2026-09-05
 Confirmed from the physical labels and photos:
 
 - **Manufacturer:** Chromagen (כרומגן)
-- **System:** solar water system with electric backup heating
-- **Tank type:** closed electric water heater / storage tank
+- **Tank / storage type:** closed storage water heater
 - **Nominal tank volume:** **150 L**
 - **Electric heating element:** **2,500 W (2.5 kW)**
 - **Serial number:** **4150829477**
 - Energy label references Israeli standard **ת״י 69.1, סעיף 4.5.1** for thermal losses.
 
+Important: the Chromagen branding includes references to solar-water systems, but the photos do **not** prove that this specific installation has active solar collectors or a working solar loop. Do not assume solar contribution unless separately confirmed.
+
 This hardware rating matches the meter experiment: when the boiler was heating, the measured incremental load was about **2.5 kW**.
+
+## Thermostat / control behavior
+
+A normal electric storage heater should stop energizing the 2.5 kW heating element once the thermostat reaches its set temperature, and restart only after the water cools enough to call for heat again. The very high historic consumption (~55–60 kWh/day) is therefore not normal thermostat-controlled behavior and remains a key diagnostic clue.
+
+Possible causes to investigate include thermostat/control failure, relay/contactor behavior, or continuous hot-water loss / cold-water replenishment. These are hypotheses, not yet proven.
 
 ## Why we are confident this is the boiler controller
 
@@ -64,5 +71,7 @@ So the best durable identifiers are:
 
 - Exact Smart Life controller/switch hardware model number.
 - Exact pairing/reset procedure for the Smart Life controller.
+- Exact thermostat model / set temperature.
+- Whether this installation has active solar collectors or an active solar loop.
 
 The water tank itself is identified: Chromagen, 150 L, 2.5 kW, serial 4150829477.

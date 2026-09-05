@@ -2,6 +2,11 @@ name: Sync Tuya Boiler
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/tuya-sync.yml"
+      - "scripts/tuya_sync.py"
+      - "scripts/requirements-tuya.txt"
   schedule:
     - cron: "17 */6 * * *"
 
@@ -47,6 +52,7 @@ jobs:
 
       - name: Sync Tuya data
         if: steps.creds.outputs.available == 'true'
+        continue-on-error: true
         run: python scripts/tuya_sync.py
 
       - name: Commit updated snapshots

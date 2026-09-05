@@ -18,7 +18,7 @@
 
     <nav class="nav">
       <a href="#summary">סיכום</a><a href="#history">גרפים</a><a href="#timeline">ציר זמן</a>
-      <a href="#devices">מכשירים</a><a href="#bills">חשבונות</a><a href="#monitoring">מעקב</a><a href="#method">שיטה</a>
+      <a href="#devices">מכשירים</a><a href="#bills">חשבונות</a><a href="#monitoring">מעקב</a><a href="#tuya">Tuya API</a><a href="#method">שיטה</a>
     </nav>
 
     <section id="summary">
@@ -68,6 +68,20 @@
       </div>
     </section>
 
+    <section id="tuya">
+      <h2>Tuya API — Smart Life</h2>
+      <p class="sub">סנכרון אוטומטי מפרויקט HA Danz. לאחר הגדרת ה־secrets ב־GitHub, המידע מתעדכן כל 6 שעות.</p>
+      <div class="two">
+        <div class="card"><h3>מצב נוכחי של בקר הדוד</h3><div id="tuyaCurrent" class="small">עדיין אין snapshot מה־API.</div></div>
+        <div class="card"><h3>מצב הסנכרון</h3><div id="tuyaSync" class="small">ממתין להרצת Tuya sync ראשונה.</div></div>
+      </div>
+      <div class="card" style="margin-top:16px">
+        <h3>צריכת דוד יומית — היסטוריית Tuya API</h3>
+        <p class="small">Tuya מאפשרת שאילתת צריכה יומית עד 90 יום אחורה. הגרף יופיע אוטומטית אחרי הסנכרון הראשון.</p>
+        <div id="tuyaDaily" class="api-chart-placeholder">אין עדיין נתוני API.</div>
+      </div>
+    </section>
+
     <section id="method">
       <h2>איך מדדנו</h2>
       <div class="two">
@@ -81,7 +95,7 @@
       <div class="card"><ul id="openQuestions"></ul></div>
     </section>
 
-    <footer>אתר מעקב מתעדכן המבוסס על חשבונות חברת החשמל, קריאות מונה, סרטוני הבהוב ונתוני אפליקציית הדוד.</footer>
+    <footer>אתר מעקב מתעדכן המבוסס על חשבונות חברת החשמל, קריאות מונה, סרטוני הבהוב, נתוני אפליקציית הדוד ו־Tuya OpenAPI.</footer>
   </main>
   <script src="data.js"></script>
   <script src="app.js"></script>

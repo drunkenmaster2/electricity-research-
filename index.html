@@ -29,7 +29,16 @@
     <section id="history">
       <h2>צריכה היסטורית</h2>
       <p class="sub">אפליקציית הדוד מול חשבונות חברת החשמל.</p>
-      <div class="two">
+
+      <div class="card compare-card">
+        <div class="compare-head">
+          <div><h3>צריכת חשמל חודשית מול צריכת הדוד</h3><p class="small">הדוד הוא מדידה ישירה מהאפליקציה. כלל הבית הוא אומדן חודשי שחושב מהקצאת צריכת החשבונות לפי ימים; אוגוסט משלב גם את קריאת המונה של 3.9.</p></div>
+          <div class="legend"><span class="legend-total">כל הבית — אומדן</span><span class="legend-boiler">דוד — נמדד</span></div>
+        </div>
+        <div id="compareChart" class="compare-chart"></div>
+      </div>
+
+      <div class="two" style="margin-top:16px">
         <div class="card"><h3>דוד — קוט״ש לחודש</h3><div id="boilerChart" class="chart"></div><div class="small">* ספטמבר חלקי</div></div>
         <div class="card"><h3>ממוצע יומי לפי חשבון</h3><div id="billChart" class="chart"></div></div>
       </div>

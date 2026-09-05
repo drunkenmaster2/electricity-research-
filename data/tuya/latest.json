@@ -1,28 +1,165 @@
 {
   "device_id": "20415515a4e57cabb4b8",
-  "normalized_status": {},
-  "raw": {
-    "device": {
-      "code": 28841002,
-      "msg": "No permissions. Your subscription to cloud development plan has expired.",
-      "success": false,
-      "t": 1788615000555,
-      "tid": "e4dddb3fa92d11f19da32e1e02062fcf"
+  "normalized_status": {
+    "add_ele": {
+      "raw": 100,
+      "scale": 3,
+      "unit": "",
+      "value": 0.1
     },
-    "specification": {
-      "code": 28841002,
-      "msg": "No permissions. Your subscription to cloud development plan has expired.",
-      "success": false,
-      "t": 1788615000978,
-      "tid": "e538b0d5a92d11f19da32e1e02062fcf"
+    "countdown_1": {
+      "raw": 0,
+      "scale": 0,
+      "unit": "s",
+      "value": 0
     },
-    "status": {
-      "code": 28841002,
-      "msg": "No permissions. Your subscription to cloud development plan has expired.",
-      "success": false,
-      "t": 1788615000844,
-      "tid": "e50ae2cca92d11f19ea6f28f09c62a14"
+    "cur_current": {
+      "raw": 0,
+      "scale": 0,
+      "unit": "mA",
+      "value": 0
+    },
+    "cur_power": {
+      "raw": 0,
+      "scale": 1,
+      "unit": "W",
+      "value": 0.0
+    },
+    "cur_voltage": {
+      "raw": 2321,
+      "scale": 1,
+      "unit": "V",
+      "value": 232.1
+    },
+    "switch_1": {
+      "raw": false,
+      "scale": 0,
+      "unit": null,
+      "value": false
     }
   },
-  "synced_at": "2026-09-05T16:29:59.924484+03:00"
+  "raw": {
+    "device": {
+      "result": {
+        "active_time": 1775895235,
+        "category": "cz",
+        "category_name": "Socket",
+        "create_time": 1773141125,
+        "gateway_id": "",
+        "icon": "smart/icon/bay1611385608714reC8/e8b05305574db8ceee85004a50479928.jpg",
+        "id": "20415515a4e57cabb4b8",
+        "ip": "79.177.141.213",
+        "lat": "",
+        "local_key": "Z0jcy&Zfyr(Mm7l[",
+        "lon": "",
+        "model": "FK-SW102U-BS",
+        "name": "Boiler Smart Switch ",
+        "online": false,
+        "owner_id": "279094361",
+        "product_id": "cjbhkic2wnfb2kzp",
+        "product_name": "Boiler Smart Switch ",
+        "sub": false,
+        "time_zone": "+02:00",
+        "update_time": 1788612545,
+        "uuid": "20415515a4e57cabb4b8"
+      },
+      "success": true,
+      "t": 1788639616396,
+      "tid": "3518fb9da96711f1a6bcd6dbc6e5ffad"
+    },
+    "specification": {
+      "result": {
+        "category": "cz",
+        "functions": [
+          {
+            "code": "switch_1",
+            "desc": "{}",
+            "name": "开关1",
+            "type": "Boolean",
+            "values": "{}"
+          },
+          {
+            "code": "countdown_1",
+            "desc": "{\"unit\":\"s\",\"min\":0,\"max\":86400,\"scale\":0,\"step\":1}",
+            "name": "开关1倒计时",
+            "type": "Integer",
+            "values": "{\"unit\":\"s\",\"min\":0,\"max\":86400,\"scale\":0,\"step\":1}"
+          }
+        ],
+        "status": [
+          {
+            "code": "switch_1",
+            "name": "开关1",
+            "type": "Boolean",
+            "values": "{}"
+          },
+          {
+            "code": "countdown_1",
+            "name": "开关1倒计时",
+            "type": "Integer",
+            "values": "{\"unit\":\"s\",\"min\":0,\"max\":86400,\"scale\":0,\"step\":1}"
+          },
+          {
+            "code": "add_ele",
+            "name": "增加电量",
+            "type": "Integer",
+            "values": "{\"unit\":\"\",\"min\":0,\"max\":50000,\"scale\":3,\"step\":100}"
+          },
+          {
+            "code": "cur_current",
+            "name": "当前电流",
+            "type": "Integer",
+            "values": "{\"unit\":\"mA\",\"min\":0,\"max\":30000,\"scale\":0,\"step\":1}"
+          },
+          {
+            "code": "cur_power",
+            "name": "当前功率",
+            "type": "Integer",
+            "values": "{\"unit\":\"W\",\"min\":0,\"max\":50000,\"scale\":1,\"step\":1}"
+          },
+          {
+            "code": "cur_voltage",
+            "name": "当前电压",
+            "type": "Integer",
+            "values": "{\"unit\":\"V\",\"min\":0,\"max\":5000,\"scale\":1,\"step\":1}"
+          }
+        ]
+      },
+      "success": true,
+      "t": 1788639617164,
+      "tid": "359857b8a96711f1be43c6f569fbce83"
+    },
+    "status": {
+      "result": [
+        {
+          "code": "switch_1",
+          "value": false
+        },
+        {
+          "code": "countdown_1",
+          "value": 0
+        },
+        {
+          "code": "add_ele",
+          "value": 100
+        },
+        {
+          "code": "cur_current",
+          "value": 0
+        },
+        {
+          "code": "cur_power",
+          "value": 0
+        },
+        {
+          "code": "cur_voltage",
+          "value": 2321
+        }
+      ],
+      "success": true,
+      "t": 1788639616972,
+      "tid": "3542e7f9a96711f19e452e1e02062fcf"
+    }
+  },
+  "synced_at": "2026-09-05T23:20:15.676207+03:00"
 }

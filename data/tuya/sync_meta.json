@@ -4,20 +4,8 @@
   "endpoint": "https://openapi.tuyaeu.com",
   "errors": [
     {
-      "error": "No permissions. Your subscription to cloud development plan has expired.",
-      "stage": "device"
-    },
-    {
-      "error": "No permissions. Your subscription to cloud development plan has expired.",
-      "stage": "status"
-    },
-    {
-      "error": "No permissions. Your subscription to cloud development plan has expired.",
-      "stage": "specification"
-    },
-    {
       "api": "statistics-trend",
-      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "error": "No permissions. This API is not subscribed.",
       "range": [
         "20260608",
         "20260614"
@@ -35,7 +23,7 @@
     },
     {
       "api": "statistics-trend",
-      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "error": "No permissions. This API is not subscribed.",
       "range": [
         "20260615",
         "20260621"
@@ -53,7 +41,7 @@
     },
     {
       "api": "statistics-trend",
-      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "error": "No permissions. This API is not subscribed.",
       "range": [
         "20260622",
         "20260628"
@@ -71,7 +59,7 @@
     },
     {
       "api": "statistics-trend",
-      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "error": "No permissions. This API is not subscribed.",
       "range": [
         "20260629",
         "20260705"
@@ -89,7 +77,7 @@
     },
     {
       "api": "statistics-trend",
-      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "error": "No permissions. This API is not subscribed.",
       "range": [
         "20260706",
         "20260712"
@@ -107,7 +95,7 @@
     },
     {
       "api": "statistics-trend",
-      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "error": "No permissions. This API is not subscribed.",
       "range": [
         "20260713",
         "20260719"
@@ -125,7 +113,7 @@
     },
     {
       "api": "statistics-trend",
-      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "error": "No permissions. This API is not subscribed.",
       "range": [
         "20260720",
         "20260726"
@@ -143,7 +131,7 @@
     },
     {
       "api": "statistics-trend",
-      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "error": "No permissions. This API is not subscribed.",
       "range": [
         "20260727",
         "20260802"
@@ -161,7 +149,7 @@
     },
     {
       "api": "statistics-trend",
-      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "error": "No permissions. This API is not subscribed.",
       "range": [
         "20260803",
         "20260809"
@@ -179,7 +167,7 @@
     },
     {
       "api": "statistics-trend",
-      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "error": "No permissions. This API is not subscribed.",
       "range": [
         "20260810",
         "20260816"
@@ -197,7 +185,7 @@
     },
     {
       "api": "statistics-trend",
-      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "error": "No permissions. This API is not subscribed.",
       "range": [
         "20260817",
         "20260823"
@@ -215,7 +203,7 @@
     },
     {
       "api": "statistics-trend",
-      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "error": "No permissions. This API is not subscribed.",
       "range": [
         "20260824",
         "20260830"
@@ -233,7 +221,7 @@
     },
     {
       "api": "statistics-trend",
-      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "error": "No permissions. This API is not subscribed.",
       "range": [
         "20260831",
         "20260905"
@@ -251,7 +239,7 @@
     },
     {
       "api": "statistics-trend",
-      "error": "No permissions. Your subscription to cloud development plan has expired.",
+      "error": "No permissions. This API is not subscribed.",
       "stage": "energy_month"
     },
     {
@@ -261,7 +249,7 @@
     }
   ],
   "monthly_rows_received": 0,
-  "success": false,
-  "synced_at": "2026-09-05T16:29:59.924484+03:00",
+  "success": true,
+  "synced_at": "2026-09-05T23:20:15.676207+03:00",
   "timezone": "Asia/Jerusalem"
 }

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#182235">
+  <title>חקירת צריכת החשמל — בלפור 67</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div class="eyebrow">מחקר מתעדכן • בלפור 67 • דירה 5</div>
+      <h1>מה גרם לחשבון החשמל לזנק?</h1>
+      <p><b>המסקנה המרכזית:</b> החריגה אמיתית ונמדדה במונה. המזגן העליון צורך בהתאם למפרט. הנתון החריג ביותר נמצא בדוד, עם צריכה השקולה לחימום כמעט רציף בחלק ממאי, יוני ותחילת יולי.</p>
+      <div class="status"><span class="dot"></span><span id="updated"></span></div>
+    </header>
+
+    <nav class="nav">
+      <a href="#summary">סיכום</a><a href="#history">גרפים</a><a href="#timeline">ציר זמן</a>
+      <a href="#devices">מכשירים</a><a href="#bills">חשבונות</a><a href="#monitoring">מעקב</a><a href="#method">שיטה</a>
+    </nav>
+
+    <section id="summary">
+      <div id="kpis" class="grid4"></div>
+      <div id="findings" class="findings"></div>
+    </section>
+
+    <section id="history">
+      <h2>צריכה היסטורית</h2>
+      <p class="sub">אפליקציית הדוד מול חשבונות חברת החשמל.</p>
+      <div class="two">
+        <div class="card"><h3>דוד — קוט״ש לחודש</h3><div id="boilerChart" class="chart"></div><div class="small">* ספטמבר חלקי</div></div>
+        <div class="card"><h3>ממוצע יומי לפי חשבון</h3><div id="billChart" class="chart"></div></div>
+      </div>
+    </section>
+
+    <section id="timeline">
+      <h2>ציר הזמן</h2>
+      <div id="timelineList" class="card timeline"></div>
+    </section>
+
+    <section id="devices">
+      <h2>מכשירים ומדידות</h2>
+      <div id="devicesGrid" class="devices"></div>
+    </section>
+
+    <section id="bills">
+      <h2>חשבונות החשמל</h2>
+      <div class="card tablewrap"><table><thead><tr><th>תקופה</th><th>ימים</th><th>צריכה</th><th>ממוצע/יום</th><th>קריאות מונה</th><th>סכום</th></tr></thead><tbody id="billsBody"></tbody></table></div>
+      <p class="small">בחשבון 9.6–18.8 הקריאה של 30.6 מסומנת “הערכה”, אך קריאות 8.6 ו־18.8 הן רגילות וההפרש ביניהן הוא 6,703 קוט״ש.</p>
+    </section>
+
+    <section id="monitoring">
+      <h2>מעקב שוטף</h2>
+      <div class="two">
+        <div class="card"><h3>קריאות מונה</h3><div id="meterReadings"></div></div>
+        <div class="card"><h3>מצב אחרון</h3><div class="big">~55.4 קוט״ש/יום</div><p>המדידה בין 3.9 ל־5.9 — בערך 41% פחות מתקופת השיא של החשבון.</p><p class="small">נמשיך לעדכן כאן קריאות, נתוני דוד וחשבונות חדשים.</p></div>
+      </div>
+    </section>
+
+    <section id="method">
+      <h2>איך מדדנו</h2>
+      <div class="two">
+        <div class="card"><h3>מהבהובי המונה</h3><p>המונה מציין <b>1000 imp/kWh</b>. לכן:</p><code>Power (kW) = 3.6 / seconds_between_flashes</code><p>כך נמדדו: בית פעיל בלי דוד/מזגנים ~0.30 kW; דוד ~2.5 kW; מזגן עליון +~3.2–3.5 kW.</p></div>
+        <div class="card"><h3>בקרות</h3><div class="pills"><span>כל המפסקים למטה: כמעט אפס</span><span>דוד OFF באפליקציה: העומס נעלם</span><span>מזגן ON/OFF: תואם למפרט</span></div></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>מה עדיין לא הוכח</h2>
+      <div class="card"><ul id="openQuestions"></ul></div>
+    </section>
+
+    <footer>אתר מעקב מתעדכן המבוסס על חשבונות חברת החשמל, קריאות מונה, סרטוני הבהוב ונתוני אפליקציית הדוד.</footer>
+  </main>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -2,10 +2,10 @@
   "device_id": "20415515a4e57cabb4b8",
   "normalized_status": {
     "add_ele": {
-      "raw": 100,
+      "raw": 101,
       "scale": 3,
       "unit": "",
-      "value": 0.1
+      "value": 0.101
     },
     "countdown_1": {
       "raw": 0,
@@ -26,16 +26,16 @@
       "value": 0.0
     },
     "cur_voltage": {
-      "raw": 2321,
+      "raw": 2279,
       "scale": 1,
       "unit": "V",
-      "value": 232.1
+      "value": 227.9
     },
     "switch_1": {
-      "raw": false,
+      "raw": true,
       "scale": 0,
       "unit": null,
-      "value": false
+      "value": true
     }
   },
   "raw": {
@@ -60,12 +60,12 @@
         "product_name": "Boiler Smart Switch ",
         "sub": false,
         "time_zone": "+02:00",
-        "update_time": 1788612545,
+        "update_time": 1788691326,
         "uuid": "20415515a4e57cabb4b8"
       },
       "success": true,
-      "t": 1788669487089,
-      "tid": "c16b8d7da9ac11f19f412e1e02062fcf"
+      "t": 1788692155115,
+      "tid": "88964af1a9e111f1bfcac6f569fbce83"
     },
     "specification": {
       "result": {
@@ -126,14 +126,14 @@
         ]
       },
       "success": true,
-      "t": 1788669487461,
-      "tid": "c1b156b6a9ac11f19f412e1e02062fcf"
+      "t": 1788692155535,
+      "tid": "88e7bca8a9e111f1a05e2e1e02062fcf"
     },
     "status": {
       "result": [
         {
           "code": "switch_1",
-          "value": false
+          "value": true
         },
         {
           "code": "countdown_1",
@@ -141,7 +141,7 @@
         },
         {
           "code": "add_ele",
-          "value": 100
+          "value": 101
         },
         {
           "code": "cur_current",
@@ -153,13 +153,13 @@
         },
         {
           "code": "cur_voltage",
-          "value": 2321
+          "value": 2279
         }
       ],
       "success": true,
-      "t": 1788669487290,
-      "tid": "c192b815a9ac11f19f412e1e02062fcf"
+      "t": 1788692155345,
+      "tid": "88c4aa0aa9e111f1a880d6dbc6e5ffad"
     }
   },
-  "synced_at": "2026-09-06T07:38:06.359138+03:00"
+  "synced_at": "2026-09-06T13:55:54.349973+03:00"
 }

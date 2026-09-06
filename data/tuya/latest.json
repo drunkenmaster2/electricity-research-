@@ -2,10 +2,10 @@
   "device_id": "20415515a4e57cabb4b8",
   "normalized_status": {
     "add_ele": {
-      "raw": 101,
+      "raw": 100,
       "scale": 3,
       "unit": "",
-      "value": 0.101
+      "value": 0.1
     },
     "countdown_1": {
       "raw": 0,
@@ -14,22 +14,22 @@
       "value": 0
     },
     "cur_current": {
-      "raw": 0,
+      "raw": 10703,
       "scale": 0,
       "unit": "mA",
-      "value": 0
+      "value": 10703
     },
     "cur_power": {
-      "raw": 0,
+      "raw": 24484,
       "scale": 1,
       "unit": "W",
-      "value": 0.0
+      "value": 2448.4
     },
     "cur_voltage": {
-      "raw": 2279,
+      "raw": 2282,
       "scale": 1,
       "unit": "V",
-      "value": 227.9
+      "value": 228.2
     },
     "switch_1": {
       "raw": true,
@@ -54,18 +54,18 @@
         "lon": "",
         "model": "FK-SW102U-BS",
         "name": "Boiler Smart Switch ",
-        "online": false,
+        "online": true,
         "owner_id": "279094361",
         "product_id": "cjbhkic2wnfb2kzp",
         "product_name": "Boiler Smart Switch ",
         "sub": false,
         "time_zone": "+02:00",
-        "update_time": 1788691326,
+        "update_time": 1788692309,
         "uuid": "20415515a4e57cabb4b8"
       },
       "success": true,
-      "t": 1788692155115,
-      "tid": "88964af1a9e111f1bfcac6f569fbce83"
+      "t": 1788708487627,
+      "tid": "8f8416bcaa0711f1a953d6dbc6e5ffad"
     },
     "specification": {
       "result": {
@@ -126,8 +126,8 @@
         ]
       },
       "success": true,
-      "t": 1788692155535,
-      "tid": "88e7bca8a9e111f1a05e2e1e02062fcf"
+      "t": 1788708487934,
+      "tid": "8fc70807aa0711f1a953d6dbc6e5ffad"
     },
     "status": {
       "result": [
@@ -141,25 +141,25 @@
         },
         {
           "code": "add_ele",
-          "value": 101
+          "value": 100
         },
         {
           "code": "cur_current",
-          "value": 0
+          "value": 10703
         },
         {
           "code": "cur_power",
-          "value": 0
+          "value": 24484
         },
         {
           "code": "cur_voltage",
-          "value": 2279
+          "value": 2282
         }
       ],
       "success": true,
-      "t": 1788692155345,
-      "tid": "88c4aa0aa9e111f1a880d6dbc6e5ffad"
+      "t": 1788708487792,
+      "tid": "8fade418aa0711f1a953d6dbc6e5ffad"
     }
   },
-  "synced_at": "2026-09-06T13:55:54.349973+03:00"
+  "synced_at": "2026-09-06T18:28:06.644537+03:00"
 }

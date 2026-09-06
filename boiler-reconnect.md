@@ -1,6 +1,7 @@
 # Boiler controller — reconnect notes
 
 Saved: 2026-09-05
+Updated: 2026-09-06
 
 ## Confirmed device identity
 
@@ -9,7 +10,7 @@ Saved: 2026-09-05
 - **Deco client name:** `ESP_ABB4B8`
 - **Wi‑Fi band:** **2.4 GHz**
 - **MAC address:** `a4:e5:7c:ab:b4:b8`
-- **Virtual ID:** `20415515a4e57cabb4b8`
+- **Virtual ID / Tuya Device ID:** `20415515a4e57cabb4b8`
 - **Time zone:** `Asia/Jerusalem`
 - **Signal strength observed:** about **-50 dBm** (previous screenshot showed about -53 dBm)
 - **Public IP shown by the app:** `79.177.141.*` (partial; likely dynamic, so do not use it as the main identifier)
@@ -36,11 +37,51 @@ Important: the Chromagen branding includes references to solar-water systems, bu
 
 This hardware rating matches the meter experiment: when the boiler was heating, the measured incremental load was about **2.5 kW**.
 
+## Post-repair test — 2026-09-06
+
+The heating element was replaced on **6 Sep 2026**. The boiler was then switched on at **14:30** for a controlled observation through Smart Life.
+
+Observed checkpoints:
+
+- **15:01** — Power **2474.9 W**, Current **10.779 A**, Voltage **228.9 V**, Today **3.72 kWh**, Total **4837.93 kWh**.
+- **15:50** — Power **2474.9 W**, Today **5.73 kWh**, Total **4839.94 kWh**. Increase of **2.01 kWh in 49 min**, almost exactly what a continuously energized ~2.5 kW element should consume.
+- **17:47** — Power **2461.5 W**, Current **10.731 A**, Voltage **228.9 V**, Today **10.54 kWh**, Total **4844.75 kWh**.
+- **18:55** — Power **2454.9 W**, Current **10.713 A**, Voltage **227.9 V**, Today **13.35 kWh**, Total **4847.56 kWh**.
+
+From **15:01 to 18:55**, the total-energy counter increased by **9.63 kWh in 3 h 54 min**, equivalent to an average of about **2.47 kW**. No significant thermostat cut-off is visible in those measurements.
+
+Interpretation: replacing the heating element alone did **not** demonstrate normal thermostat cycling. If hot-water use during the test was limited, the evidence increases suspicion of the thermostat, thermostat installation/position, wiring, or another control fault. Significant hot-water draw during the test could extend the heating period and must be considered before assigning root cause.
+
 ## Thermostat / control behavior
 
 A normal electric storage heater should stop energizing the 2.5 kW heating element once the thermostat reaches its set temperature, and restart only after the water cools enough to call for heat again. The very high historic consumption (~55–60 kWh/day) is therefore not normal thermostat-controlled behavior and remains a key diagnostic clue.
 
-Possible causes to investigate include thermostat/control failure, relay/contactor behavior, or continuous hot-water loss / cold-water replenishment. These are hypotheses, not yet proven.
+Possible causes to investigate include thermostat/control failure, incorrect thermostat installation or placement, wiring that bypasses the thermostat, relay/contactor behavior, or continuous hot-water loss / cold-water replenishment. These are hypotheses, not yet proven.
+
+## Tuya Cloud / API status
+
+The Smart Life account is linked to Tuya Cloud project **HA Danz** in the **Central Europe Data Center**.
+
+Confirmed cloud device:
+
+- Product/device group: `Boiler Smart Switch`
+- Device name: `Boiler Smart Switch`
+- Device ID: `20415515a4e57cabb4b8`
+- API endpoint: `https://openapi.tuyaeu.com`
+
+GitHub repository secrets are configured for the project's Access ID and Access Secret. The repository includes an automated Tuya sync workflow that attempts to retrieve current device status plus daily and monthly electricity history.
+
+The first successful diagnostic connection showed that Tuya currently blocks API access because the project's **IoT Core / Cloud Development trial expired on 2026-05-10**. The API response is:
+
+`No permissions. Your subscription to cloud development plan has expired.`
+
+A second Trial Edition cannot be activated because this account already used the trial. On **2026-09-05** an **extension application** was submitted in Tuya Developer Platform; the UI showed **"Your application for extension is being reviewed."**
+
+Once the extension is approved, rerun **Actions → Sync Tuya Boiler**. The collector is already configured to request:
+
+- current device information/status/specification;
+- daily electricity history over the latest 90 days, in 7-day chunks;
+- monthly history over the latest 12 months.
 
 ## Why we are confident this is the boiler controller
 
@@ -73,5 +114,7 @@ So the best durable identifiers are:
 - Exact pairing/reset procedure for the Smart Life controller.
 - Exact thermostat model / set temperature.
 - Whether this installation has active solar collectors or an active solar loop.
+- Whether there was significant hot-water draw during the post-repair 14:30–18:55 test.
+- Tuya API extension approval and historical daily-data retrieval.
 
 The water tank itself is identified: Chromagen, 150 L, 2.5 kW, serial 4150829477.

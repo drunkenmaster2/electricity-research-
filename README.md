@@ -16,43 +16,43 @@ Confirmed device:
 - Deco client: `ESP_ABB4B8`
 - API endpoint: `https://openapi.tuyaeu.com`
 
-### One-time secret setup
+### Credentials
 
-In Tuya Developer Platform → **Cloud → Development → HA Danz → Overview**, copy the project's **Access ID / Client ID** and **Access Secret / Client Secret**.
-
-Do not commit or paste the secret into this public repository.
-
-In GitHub open:
-
-**Settings → Secrets and variables → Actions → New repository secret**
-
-Create exactly these two repository secrets:
+The GitHub repository already has the Tuya Access ID and Access Secret configured as Actions secrets:
 
 - `TUYA_ACCESS_ID`
 - `TUYA_ACCESS_SECRET`
 
-The device ID and EU endpoint are not secret and are already configured in the workflow.
+Do not commit or paste the secret into this public repository.
 
-### Run it
+### Current blocker — IoT Core trial expired
 
-After adding the two secrets:
+The credentials are detected correctly by the GitHub Action, but Tuya currently rejects device/status/history requests with:
 
-1. Open **Actions → Sync Tuya Boiler**.
-2. Choose **Run workflow**.
-3. The workflow queries device info, current status and specifications.
-4. It also requests Tuya electricity statistics:
-   - daily data in 7-day chunks for the latest 90 days;
-   - monthly data for the latest 12 months.
-5. Results are committed under `data/tuya/`, which triggers the Pages deployment.
+`No permissions. Your subscription to cloud development plan has expired.`
 
-The sync also runs automatically every 6 hours.
+The original IoT Core / Cloud Development trial ran from **2026-04-10 to 2026-05-10**. A second Trial Edition cannot be activated because this Tuya account has already used a trial.
 
-If the energy-statistics endpoint returns an authorization error, use Tuya's API Explorer for **Query Energy Consumption Trend** and authorize/subscribe the required API product for `HA Danz`. Current status/device calls can still work independently.
+On **2026-09-05**, an extension application was submitted through Tuya Developer Platform. The project UI showed:
+
+`Your application for extension is being reviewed.`
+
+Once that extension is approved, rerun **Actions → Sync Tuya Boiler**. No GitHub secret or code changes should be needed.
+
+### What the sync requests
+
+The workflow queries:
+
+1. device info, current status and specifications;
+2. daily electricity history in 7-day chunks for the latest 90 days;
+3. monthly electricity history for the latest 12 months.
+
+Results are committed under `data/tuya/`, which triggers the Pages deployment. The sync also runs automatically every 6 hours.
 
 ## Key files
 
 - `data.js` — manually curated research data used by the dashboard.
-- `boiler-reconnect.md` — Smart Life/Deco/boiler hardware recovery notes.
+- `boiler-reconnect.md` — Smart Life/Deco/boiler hardware recovery notes plus the 6 Sep post-repair test and Tuya API status.
 - `scripts/tuya_sync.py` — Tuya OpenAPI collector.
 - `.github/workflows/tuya-sync.yml` — scheduled API sync.
-- `data/tuya/` — generated Tuya snapshots/history.
+- `data/tuya/` — generated Tuya snapshots/history and diagnostics.

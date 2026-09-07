@@ -1,7 +1,7 @@
 # Boiler controller — reconnect notes
 
 Saved: 2026-09-05
-Updated: 2026-09-06
+Updated: 2026-09-07
 
 ## Confirmed device identity
 
@@ -39,7 +39,7 @@ This hardware rating matches the meter experiment: when the boiler was heating, 
 
 ## Post-repair test — 2026-09-06
 
-The heating element was replaced on **6 Sep 2026**. The boiler was then switched on at **14:30** for a controlled observation through Smart Life.
+Both the **heating element and thermostat were replaced** on **6 Sep 2026**. The boiler was then switched on at **14:30** for a controlled observation through Smart Life.
 
 Observed checkpoints:
 
@@ -47,16 +47,23 @@ Observed checkpoints:
 - **15:50** — Power **2474.9 W**, Today **5.73 kWh**, Total **4839.94 kWh**. Increase of **2.01 kWh in 49 min**, almost exactly what a continuously energized ~2.5 kW element should consume.
 - **17:47** — Power **2461.5 W**, Current **10.731 A**, Voltage **228.9 V**, Today **10.54 kWh**, Total **4844.75 kWh**.
 - **18:55** — Power **2454.9 W**, Current **10.713 A**, Voltage **227.9 V**, Today **13.35 kWh**, Total **4847.56 kWh**.
+- **~19:00** — the boiler was **manually switched OFF by the user**. Therefore later 0 W readings do **not** demonstrate thermostat cut-off.
+- **23:39** — Power **0 W**, Current **0 mA**, Voltage **233.4 V**, Today **14.59 kWh**, Total **4848.80 kWh**, September **110.61 kWh**. This is an OFF-state reading after the manual shutdown.
+- **7 Sep 07:54** — Power **0 W**, Current **0 mA**, Voltage **233.7 V**, Today **0.00 kWh**, Total **4848.80 kWh**, September **110.61 kWh**.
 
 From **15:01 to 18:55**, the total-energy counter increased by **9.63 kWh in 3 h 54 min**, equivalent to an average of about **2.47 kW**. No significant thermostat cut-off is visible in those measurements.
 
-Interpretation: replacing the heating element alone did **not** demonstrate normal thermostat cycling. If hot-water use during the test was limited, the evidence increases suspicion of the thermostat, thermostat installation/position, wiring, or another control fault. Significant hot-water draw during the test could extend the heating period and must be considered before assigning root cause.
+The unchanged Total reading from **23:39 to 07:54** confirms zero controller-recorded boiler consumption overnight while the Smart Life switch was OFF.
+
+Note: Total Ele rose from **4847.56 kWh at 18:55** to **4848.80 kWh at 23:39**, even though the switch was manually turned off around 19:00. Because the exact 19:00 Total value was not captured, this 1.24 kWh difference should not be used to infer a thermostat cut-off time; delayed/batched Smart Life energy accounting is one possible explanation.
+
+Interpretation: replacing **both the heating element and thermostat** did not yet demonstrate normal thermostat cycling. If hot-water use during the test was limited, the remaining suspects include incorrect thermostat installation/placement, a thermostat probe not correctly seated, incorrect setpoint or a defective new thermostat, wiring that bypasses the thermostat, another control fault, or continuous hot-water loss / cold-water replenishment. Significant hot-water draw during the test could extend the heating period and must be considered before assigning root cause.
 
 ## Thermostat / control behavior
 
 A normal electric storage heater should stop energizing the 2.5 kW heating element once the thermostat reaches its set temperature, and restart only after the water cools enough to call for heat again. The very high historic consumption (~55–60 kWh/day) is therefore not normal thermostat-controlled behavior and remains a key diagnostic clue.
 
-Possible causes to investigate include thermostat/control failure, incorrect thermostat installation or placement, wiring that bypasses the thermostat, relay/contactor behavior, or continuous hot-water loss / cold-water replenishment. These are hypotheses, not yet proven.
+Possible causes to investigate now include incorrect thermostat installation or placement, the probe not being fully seated in its pocket, wrong thermostat setpoint, a defective replacement thermostat, wiring that bypasses the thermostat, relay/contactor behavior, or continuous hot-water loss / cold-water replenishment. These are hypotheses, not yet proven.
 
 ## Tuya Cloud / API status
 
@@ -71,13 +78,15 @@ Confirmed cloud device:
 
 GitHub repository secrets are configured for the project's Access ID and Access Secret. The repository includes an automated Tuya sync workflow that attempts to retrieve current device status plus daily and monthly electricity history.
 
-The first successful diagnostic connection showed that Tuya currently blocks API access because the project's **IoT Core / Cloud Development trial expired on 2026-05-10**. The API response is:
+The original IoT Core / Cloud Development trial expired on **2026-05-10**. After extension, current device/status/specification access resumed, but the historical energy endpoint currently responds:
 
-`No permissions. Your subscription to cloud development plan has expired.`
+`No permissions. This API is not subscribed.`
 
-A second Trial Edition cannot be activated because this account already used the trial. On **2026-09-05** an **extension application** was submitted in Tuya Developer Platform; the UI showed **"Your application for extension is being reviewed."**
+The fallback time-series endpoint currently responds:
 
-Once the extension is approved, rerun **Actions → Sync Tuya Boiler**. The collector is already configured to request:
+`token invalid`
+
+So the current Tuya blocker is specifically **historical energy API authorization/subscription**, not basic device connectivity. The collector is already configured to request:
 
 - current device information/status/specification;
 - daily electricity history over the latest 90 days, in 7-day chunks;
@@ -112,9 +121,10 @@ So the best durable identifiers are:
 
 - Exact Smart Life controller/switch hardware model number.
 - Exact pairing/reset procedure for the Smart Life controller.
-- Exact thermostat model / set temperature.
+- Exact replacement thermostat model / set temperature.
+- Confirmation that the replacement thermostat probe is correctly seated and that the element is electrically routed through the thermostat contacts.
 - Whether this installation has active solar collectors or an active solar loop.
 - Whether there was significant hot-water draw during the post-repair 14:30–18:55 test.
-- Tuya API extension approval and historical daily-data retrieval.
+- Tuya historical energy API authorization and historical daily-data retrieval.
 
 The water tank itself is identified: Chromagen, 150 L, 2.5 kW, serial 4150829477.

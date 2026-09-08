@@ -1,7 +1,7 @@
 # Boiler controller — reconnect notes
 
 Saved: 2026-09-05
-Updated: 2026-09-07
+Updated: 2026-09-08
 
 ## Confirmed device identity
 
@@ -50,10 +50,13 @@ Observed checkpoints:
 - **~19:00** — the boiler was **manually switched OFF by the user**. Therefore later 0 W readings do **not** demonstrate thermostat cut-off.
 - **23:39** — Power **0 W**, Current **0 mA**, Voltage **233.4 V**, Today **14.59 kWh**, Total **4848.80 kWh**, September **110.61 kWh**. This is an OFF-state reading after the manual shutdown.
 - **7 Sep 07:54** — Power **0 W**, Current **0 mA**, Voltage **233.7 V**, Today **0.00 kWh**, Total **4848.80 kWh**, September **110.61 kWh**.
+- **8 Sep 22:09** — Power **0 W**, Current **0 mA**, Voltage **231.1 V**, Today **0.00 kWh**, Total **4848.80 kWh**, September **110.61 kWh**.
 
 From **15:01 to 18:55**, the total-energy counter increased by **9.63 kWh in 3 h 54 min**, equivalent to an average of about **2.47 kW**. No significant thermostat cut-off is visible in those measurements.
 
-The unchanged Total reading from **23:39 to 07:54** confirms zero controller-recorded boiler consumption overnight while the Smart Life switch was OFF.
+The unchanged Total reading from **6 Sep 23:39 to 8 Sep 22:09** confirms zero controller-recorded boiler consumption for about **46 h 30 min** while the Smart Life switch was OFF. Relative to the **7 Sep 07:54** checkpoint, the counter also remained unchanged for about **38 h 15 min**.
+
+This is a strong control result for the Smart Life switch: **OFF fully removes the boiler load**. It does **not** test whether the replacement thermostat cuts power correctly when Smart Life remains ON.
 
 Note: Total Ele rose from **4847.56 kWh at 18:55** to **4848.80 kWh at 23:39**, even though the switch was manually turned off around 19:00. Because the exact 19:00 Total value was not captured, this 1.24 kWh difference should not be used to infer a thermostat cut-off time; delayed/batched Smart Life energy accounting is one possible explanation.
 
@@ -125,6 +128,7 @@ So the best durable identifiers are:
 - Confirmation that the replacement thermostat probe is correctly seated and that the element is electrically routed through the thermostat contacts.
 - Whether this installation has active solar collectors or an active solar loop.
 - Whether there was significant hot-water draw during the post-repair 14:30–18:55 test.
+- Direct observation of thermostat cut-off while Smart Life remains ON.
 - Tuya historical energy API authorization and historical daily-data retrieval.
 
 The water tank itself is identified: Chromagen, 150 L, 2.5 kW, serial 4150829477.

@@ -59,6 +59,14 @@ Note: Total Ele rose from **4847.56 kWh at 18:55** to **4848.80 kWh at 23:39**, 
 
 Interpretation: replacing **both the heating element and thermostat** did not yet demonstrate normal thermostat cycling. If hot-water use during the test was limited, the remaining suspects include incorrect thermostat installation/placement, a thermostat probe not correctly seated, incorrect setpoint or a defective new thermostat, wiring that bypasses the thermostat, another control fault, or continuous hot-water loss / cold-water replenishment. Significant hot-water draw during the test could extend the heating period and must be considered before assigning root cause.
 
+## Whole-home meter checkpoint — 2026-09-07
+
+- **6 Sep, approximately 15:01–15:50:** **118,237 kWh** (no exact point time was recorded).
+- **7 Sep ~18:40:** **118,286 kWh**.
+- Difference from the previous reading: **+49 kWh**.
+
+Because the 6 Sep reading is pinned down only to that approximate time range, any derived kWh/day rate would be approximate and must not be presented as exact.
+
 ## Thermostat / control behavior
 
 A normal electric storage heater should stop energizing the 2.5 kW heating element once the thermostat reaches its set temperature, and restart only after the water cools enough to call for heat again. The very high historic consumption (~55–60 kWh/day) is therefore not normal thermostat-controlled behavior and remains a key diagnostic clue.

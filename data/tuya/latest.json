@@ -2,10 +2,10 @@
   "device_id": "20415515a4e57cabb4b8",
   "normalized_status": {
     "add_ele": {
-      "raw": 1,
+      "raw": 100,
       "scale": 3,
       "unit": "",
-      "value": 0.001
+      "value": 0.1
     },
     "countdown_1": {
       "raw": 0,
@@ -14,22 +14,22 @@
       "value": 0
     },
     "cur_current": {
-      "raw": 0,
+      "raw": 10703,
       "scale": 0,
       "unit": "mA",
-      "value": 0
+      "value": 10703
     },
     "cur_power": {
-      "raw": 0,
+      "raw": 24353,
       "scale": 1,
       "unit": "W",
-      "value": 0.0
+      "value": 2435.3
     },
     "cur_voltage": {
-      "raw": 2318,
+      "raw": 2273,
       "scale": 1,
       "unit": "V",
-      "value": 231.8
+      "value": 227.3
     },
     "switch_1": {
       "raw": true,
@@ -64,8 +64,8 @@
         "uuid": "20415515a4e57cabb4b8"
       },
       "success": true,
-      "t": 1789039143121,
-      "tid": "6d876837ad0911f1b410d6dbc6e5ffad"
+      "t": 1789057447352,
+      "tid": "0baeabfbad3411f1b4c3d6dbc6e5ffad"
     },
     "specification": {
       "result": {
@@ -126,8 +126,8 @@
         ]
       },
       "success": true,
-      "t": 1789039143557,
-      "tid": "6de3612ead0911f1ad722e1e02062fcf"
+      "t": 1789057447914,
+      "tid": "0c21a19fad3411f1ae4f2e1e02062fcf"
     },
     "status": {
       "result": [
@@ -141,25 +141,25 @@
         },
         {
           "code": "add_ele",
-          "value": 1
+          "value": 100
         },
         {
           "code": "cur_current",
-          "value": 0
+          "value": 10703
         },
         {
           "code": "cur_power",
-          "value": 0
+          "value": 24353
         },
         {
           "code": "cur_voltage",
-          "value": 2318
+          "value": 2273
         }
       ],
       "success": true,
-      "t": 1789039143358,
-      "tid": "6dbfb52fad0911f1ad722e1e02062fcf"
+      "t": 1789057447705,
+      "tid": "0bf21b4dad3411f1ae4f2e1e02062fcf"
     }
   },
-  "synced_at": "2026-09-10T14:19:01.864150+03:00"
+  "synced_at": "2026-09-10T19:24:06.404850+03:00"
 }

@@ -2,10 +2,10 @@
   "device_id": "20415515a4e57cabb4b8",
   "normalized_status": {
     "add_ele": {
-      "raw": 100,
+      "raw": 90,
       "scale": 3,
       "unit": "",
-      "value": 0.1
+      "value": 0.09
     },
     "countdown_1": {
       "raw": 0,
@@ -14,28 +14,28 @@
       "value": 0
     },
     "cur_current": {
-      "raw": 10703,
+      "raw": 0,
       "scale": 0,
       "unit": "mA",
-      "value": 10703
+      "value": 0
     },
     "cur_power": {
-      "raw": 24353,
+      "raw": 0,
       "scale": 1,
       "unit": "W",
-      "value": 2435.3
+      "value": 0.0
     },
     "cur_voltage": {
-      "raw": 2273,
+      "raw": 2321,
       "scale": 1,
       "unit": "V",
-      "value": 227.3
+      "value": 232.1
     },
     "switch_1": {
-      "raw": true,
+      "raw": false,
       "scale": 0,
       "unit": null,
-      "value": true
+      "value": false
     }
   },
   "raw": {
@@ -64,8 +64,8 @@
         "uuid": "20415515a4e57cabb4b8"
       },
       "success": true,
-      "t": 1789057447352,
-      "tid": "0baeabfbad3411f1b4c3d6dbc6e5ffad"
+      "t": 1789073538112,
+      "tid": "827433b8ad5911f18a49c6f569fbce83"
     },
     "specification": {
       "result": {
@@ -126,14 +126,14 @@
         ]
       },
       "success": true,
-      "t": 1789057447914,
-      "tid": "0c21a19fad3411f1ae4f2e1e02062fcf"
+      "t": 1789073538515,
+      "tid": "82e0b3f1ad5911f1aef32e1e02062fcf"
     },
     "status": {
       "result": [
         {
           "code": "switch_1",
-          "value": true
+          "value": false
         },
         {
           "code": "countdown_1",
@@ -141,25 +141,25 @@
         },
         {
           "code": "add_ele",
-          "value": 100
+          "value": 90
         },
         {
           "code": "cur_current",
-          "value": 10703
+          "value": 0
         },
         {
           "code": "cur_power",
-          "value": 24353
+          "value": 0
         },
         {
           "code": "cur_voltage",
-          "value": 2273
+          "value": 2321
         }
       ],
       "success": true,
-      "t": 1789057447705,
-      "tid": "0bf21b4dad3411f1ae4f2e1e02062fcf"
+      "t": 1789073538329,
+      "tid": "82bfa8b0ad5911f1b56bd6dbc6e5ffad"
     }
   },
-  "synced_at": "2026-09-10T19:24:06.404850+03:00"
+  "synced_at": "2026-09-10T23:52:17.096062+03:00"
 }

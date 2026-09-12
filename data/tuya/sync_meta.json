@@ -7,8 +7,8 @@
       "api": "statistics-trend",
       "error": "No permissions. This API is not subscribed.",
       "range": [
-        "20260614",
-        "20260620"
+        "20260615",
+        "20260621"
       ],
       "stage": "energy_day"
     },
@@ -16,8 +16,8 @@
       "api": "device-datadate",
       "error": "token invalid",
       "range": [
-        "20260614",
-        "20260620"
+        "20260615",
+        "20260621"
       ],
       "stage": "energy_day"
     },
@@ -25,8 +25,8 @@
       "api": "statistics-trend",
       "error": "No permissions. This API is not subscribed.",
       "range": [
-        "20260621",
-        "20260627"
+        "20260622",
+        "20260628"
       ],
       "stage": "energy_day"
     },
@@ -34,8 +34,8 @@
       "api": "device-datadate",
       "error": "token invalid",
       "range": [
-        "20260621",
-        "20260627"
+        "20260622",
+        "20260628"
       ],
       "stage": "energy_day"
     },
@@ -43,8 +43,8 @@
       "api": "statistics-trend",
       "error": "No permissions. This API is not subscribed.",
       "range": [
-        "20260628",
-        "20260704"
+        "20260629",
+        "20260705"
       ],
       "stage": "energy_day"
     },
@@ -52,8 +52,8 @@
       "api": "device-datadate",
       "error": "token invalid",
       "range": [
-        "20260628",
-        "20260704"
+        "20260629",
+        "20260705"
       ],
       "stage": "energy_day"
     },
@@ -61,8 +61,8 @@
       "api": "statistics-trend",
       "error": "No permissions. This API is not subscribed.",
       "range": [
-        "20260705",
-        "20260711"
+        "20260706",
+        "20260712"
       ],
       "stage": "energy_day"
     },
@@ -70,8 +70,8 @@
       "api": "device-datadate",
       "error": "token invalid",
       "range": [
-        "20260705",
-        "20260711"
+        "20260706",
+        "20260712"
       ],
       "stage": "energy_day"
     },
@@ -79,8 +79,8 @@
       "api": "statistics-trend",
       "error": "No permissions. This API is not subscribed.",
       "range": [
-        "20260712",
-        "20260718"
+        "20260713",
+        "20260719"
       ],
       "stage": "energy_day"
     },
@@ -88,8 +88,8 @@
       "api": "device-datadate",
       "error": "token invalid",
       "range": [
-        "20260712",
-        "20260718"
+        "20260713",
+        "20260719"
       ],
       "stage": "energy_day"
     },
@@ -97,8 +97,8 @@
       "api": "statistics-trend",
       "error": "No permissions. This API is not subscribed.",
       "range": [
-        "20260719",
-        "20260725"
+        "20260720",
+        "20260726"
       ],
       "stage": "energy_day"
     },
@@ -106,8 +106,8 @@
       "api": "device-datadate",
       "error": "token invalid",
       "range": [
-        "20260719",
-        "20260725"
+        "20260720",
+        "20260726"
       ],
       "stage": "energy_day"
     },
@@ -115,8 +115,8 @@
       "api": "statistics-trend",
       "error": "No permissions. This API is not subscribed.",
       "range": [
-        "20260726",
-        "20260801"
+        "20260727",
+        "20260802"
       ],
       "stage": "energy_day"
     },
@@ -124,8 +124,8 @@
       "api": "device-datadate",
       "error": "token invalid",
       "range": [
-        "20260726",
-        "20260801"
+        "20260727",
+        "20260802"
       ],
       "stage": "energy_day"
     },
@@ -133,8 +133,8 @@
       "api": "statistics-trend",
       "error": "No permissions. This API is not subscribed.",
       "range": [
-        "20260802",
-        "20260808"
+        "20260803",
+        "20260809"
       ],
       "stage": "energy_day"
     },
@@ -142,8 +142,8 @@
       "api": "device-datadate",
       "error": "token invalid",
       "range": [
-        "20260802",
-        "20260808"
+        "20260803",
+        "20260809"
       ],
       "stage": "energy_day"
     },
@@ -151,8 +151,8 @@
       "api": "statistics-trend",
       "error": "No permissions. This API is not subscribed.",
       "range": [
-        "20260809",
-        "20260815"
+        "20260810",
+        "20260816"
       ],
       "stage": "energy_day"
     },
@@ -160,8 +160,8 @@
       "api": "device-datadate",
       "error": "token invalid",
       "range": [
-        "20260809",
-        "20260815"
+        "20260810",
+        "20260816"
       ],
       "stage": "energy_day"
     },
@@ -169,8 +169,8 @@
       "api": "statistics-trend",
       "error": "No permissions. This API is not subscribed.",
       "range": [
-        "20260816",
-        "20260822"
+        "20260817",
+        "20260823"
       ],
       "stage": "energy_day"
     },
@@ -178,8 +178,8 @@
       "api": "device-datadate",
       "error": "token invalid",
       "range": [
-        "20260816",
-        "20260822"
+        "20260817",
+        "20260823"
       ],
       "stage": "energy_day"
     },
@@ -187,8 +187,8 @@
       "api": "statistics-trend",
       "error": "No permissions. This API is not subscribed.",
       "range": [
-        "20260823",
-        "20260829"
+        "20260824",
+        "20260830"
       ],
       "stage": "energy_day"
     },
@@ -196,8 +196,8 @@
       "api": "device-datadate",
       "error": "token invalid",
       "range": [
-        "20260823",
-        "20260829"
+        "20260824",
+        "20260830"
       ],
       "stage": "energy_day"
     },
@@ -205,8 +205,8 @@
       "api": "statistics-trend",
       "error": "No permissions. This API is not subscribed.",
       "range": [
-        "20260830",
-        "20260905"
+        "20260831",
+        "20260906"
       ],
       "stage": "energy_day"
     },
@@ -214,8 +214,8 @@
       "api": "device-datadate",
       "error": "token invalid",
       "range": [
-        "20260830",
-        "20260905"
+        "20260831",
+        "20260906"
       ],
       "stage": "energy_day"
     },
@@ -223,8 +223,8 @@
       "api": "statistics-trend",
       "error": "No permissions. This API is not subscribed.",
       "range": [
-        "20260906",
-        "20260911"
+        "20260907",
+        "20260912"
       ],
       "stage": "energy_day"
     },
@@ -232,8 +232,8 @@
       "api": "device-datadate",
       "error": "token invalid",
       "range": [
-        "20260906",
-        "20260911"
+        "20260907",
+        "20260912"
       ],
       "stage": "energy_day"
     },
@@ -250,6 +250,6 @@
   ],
   "monthly_rows_received": 0,
   "success": true,
-  "synced_at": "2026-09-11T23:57:37.979063+03:00",
+  "synced_at": "2026-09-12T07:33:46.188458+03:00",
   "timezone": "Asia/Jerusalem"
 }

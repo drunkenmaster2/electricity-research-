@@ -26,10 +26,10 @@
       "value": 0.0
     },
     "cur_voltage": {
-      "raw": 2337,
+      "raw": 2318,
       "scale": 1,
       "unit": "V",
-      "value": 233.7
+      "value": 231.8
     },
     "switch_1": {
       "raw": false,
@@ -60,12 +60,12 @@
         "product_name": "Boiler Smart Switch ",
         "sub": false,
         "time_zone": "+02:00",
-        "update_time": 1789025762,
+        "update_time": 1789632021,
         "uuid": "20415515a4e57cabb4b8"
       },
       "success": true,
-      "t": 1789620732420,
-      "tid": "8bcfe8d5b25311f1a36cd628f34ddb6d"
+      "t": 1789645251529,
+      "tid": "a24bd023b28c11f1b66a2e8436e7febe"
     },
     "specification": {
       "result": {
@@ -126,8 +126,8 @@
         ]
       },
       "success": true,
-      "t": 1789620732897,
-      "tid": "8c1c46d1b25311f1a36cd628f34ddb6d"
+      "t": 1789645251938,
+      "tid": "a29fceddb28c11f1a42fd628f34ddb6d"
     },
     "status": {
       "result": [
@@ -153,13 +153,13 @@
         },
         {
           "code": "cur_voltage",
-          "value": 2337
+          "value": 2318
         }
       ],
       "success": true,
-      "t": 1789620732638,
-      "tid": "8bf8c34db25311f1a920de3785290352"
+      "t": 1789645251738,
+      "tid": "a2800ed1b28c11f1b66a2e8436e7febe"
     }
   },
-  "synced_at": "2026-09-17T07:52:11.686311+03:00"
+  "synced_at": "2026-09-17T14:40:50.713773+03:00"
 }

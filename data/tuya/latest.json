@@ -26,10 +26,10 @@
       "value": 0.0
     },
     "cur_voltage": {
-      "raw": 2337,
+      "raw": 2334,
       "scale": 1,
       "unit": "V",
-      "value": 233.7
+      "value": 233.4
     },
     "switch_1": {
       "raw": false,
@@ -64,8 +64,8 @@
         "uuid": "20415515a4e57cabb4b8"
       },
       "success": true,
-      "t": 1790771646569,
-      "tid": "3a13f955bccb11f18a6c1ebfec6e4e0a"
+      "t": 1790806526620,
+      "tid": "703b8392bd1c11f1b22572feba20a1c4"
     },
     "specification": {
       "result": {
@@ -126,8 +126,8 @@
         ]
       },
       "success": true,
-      "t": 1790771646889,
-      "tid": "3a573b4bbccb11f1b10b72feba20a1c4"
+      "t": 1790806526995,
+      "tid": "7083277abd1c11f1b22572feba20a1c4"
     },
     "status": {
       "result": [
@@ -153,13 +153,13 @@
         },
         {
           "code": "cur_voltage",
-          "value": 2337
+          "value": 2334
         }
       ],
       "success": true,
-      "t": 1790771646738,
-      "tid": "3a3d62b7bccb11f1b24776b85a5a2bb6"
+      "t": 1790806526818,
+      "tid": "7064df91bd1c11f1b22572feba20a1c4"
     }
   },
-  "synced_at": "2026-09-30T15:34:05.902984+03:00"
+  "synced_at": "2026-10-01T01:15:25.668768+03:00"
 }

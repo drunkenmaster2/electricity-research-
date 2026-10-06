@@ -51,6 +51,9 @@ Observed checkpoints:
 - **23:39** — Power **0 W**, Current **0 mA**, Voltage **233.4 V**, Today **14.59 kWh**, Total **4848.80 kWh**, September **110.61 kWh**. This is an OFF-state reading after the manual shutdown.
 - **7 Sep 07:54** — Power **0 W**, Current **0 mA**, Voltage **233.7 V**, Today **0.00 kWh**, Total **4848.80 kWh**, September **110.61 kWh**.
 - **8 Sep 22:09** — Power **0 W**, Current **0 mA**, Voltage **231.1 V**, Today **0.00 kWh**, Total **4848.80 kWh**, September **110.61 kWh**.
+- **10 Sep 09:33–19:50** — a controlled ON test directly demonstrated thermostat cycling: ~2.45 kW at 09:33, **0 W while Smart Life remained ON** at 17:34, then ~2.48 kW again at 19:48; user manually switched OFF around 19:50.
+- **12 Sep 15:14** — after remaining OFF: Power **0 W**, Current **0 mA**, Voltage **231.8 V**, Total **4861.59 kWh**, September **123.41 kWh**.
+- **16 Sep 20:46** — still OFF: Power **0 W**, Current **0 mA**, Voltage **232.8 V**, Total **4861.59 kWh**, September **123.41 kWh**. No change from 12 Sep.
 
 From **15:01 to 18:55**, the total-energy counter increased by **9.63 kWh in 3 h 54 min**, equivalent to an average of about **2.47 kW**. No significant thermostat cut-off was visible during that test.
 

@@ -2,10 +2,10 @@
   "device_id": "20415515a4e57cabb4b8",
   "normalized_status": {
     "add_ele": {
-      "raw": 40,
+      "raw": 41,
       "scale": 3,
       "unit": "",
-      "value": 0.04
+      "value": 0.041
     },
     "countdown_1": {
       "raw": 0,
@@ -26,10 +26,10 @@
       "value": 0.0
     },
     "cur_voltage": {
-      "raw": 2337,
+      "raw": 2344,
       "scale": 1,
       "unit": "V",
-      "value": 233.7
+      "value": 234.4
     },
     "switch_1": {
       "raw": false,
@@ -64,8 +64,8 @@
         "uuid": "20415515a4e57cabb4b8"
       },
       "success": true,
-      "t": 1791466103173,
-      "tid": "2278019ec31c11f1a3521ebfec6e4e0a"
+      "t": 1791501639004,
+      "tid": "df80fbbcc36e11f189a372feba20a1c4"
     },
     "specification": {
       "result": {
@@ -126,8 +126,8 @@
         ]
       },
       "success": true,
-      "t": 1791466103586,
-      "tid": "22c9a021c31c11f1a3521ebfec6e4e0a"
+      "t": 1791501639418,
+      "tid": "dfcdc33bc36e11f189a372feba20a1c4"
     },
     "status": {
       "result": [
@@ -141,7 +141,7 @@
         },
         {
           "code": "add_ele",
-          "value": 40
+          "value": 41
         },
         {
           "code": "cur_current",
@@ -153,13 +153,13 @@
         },
         {
           "code": "cur_voltage",
-          "value": 2337
+          "value": 2344
         }
       ],
       "success": true,
-      "t": 1791466103390,
-      "tid": "22a865eac31c11f183b1b24ed3ecc0bd"
+      "t": 1791501639228,
+      "tid": "dfabad01c36e11f184a3b24ed3ecc0bd"
     }
   },
-  "synced_at": "2026-10-08T16:28:22.406395+03:00"
+  "synced_at": "2026-10-09T02:20:38.122962+03:00"
 }

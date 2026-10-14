@@ -2,10 +2,10 @@
   "device_id": "20415515a4e57cabb4b8",
   "normalized_status": {
     "add_ele": {
-      "raw": 100,
+      "raw": 49,
       "scale": 3,
       "unit": "",
-      "value": 0.1
+      "value": 0.049
     },
     "countdown_1": {
       "raw": 0,
@@ -26,10 +26,10 @@
       "value": 0.0
     },
     "cur_voltage": {
-      "raw": 2289,
+      "raw": 2321,
       "scale": 1,
       "unit": "V",
-      "value": 228.9
+      "value": 232.1
     },
     "switch_1": {
       "raw": false,
@@ -54,18 +54,18 @@
         "lon": "",
         "model": "FK-SW102U-BS",
         "name": "Boiler Smart Switch ",
-        "online": true,
+        "online": false,
         "owner_id": "279094361",
         "product_id": "cjbhkic2wnfb2kzp",
         "product_name": "Boiler Smart Switch ",
         "sub": false,
         "time_zone": "+02:00",
-        "update_time": 1789632021,
+        "update_time": 1792010863,
         "uuid": "20415515a4e57cabb4b8"
       },
       "success": true,
-      "t": 1791997789155,
-      "tid": "1001cb57c7f211f195d1b24ed3ecc0bd"
+      "t": 1792014034434,
+      "tid": "e2f9107cc81711f1963bb24ed3ecc0bd"
     },
     "specification": {
       "result": {
@@ -126,8 +126,8 @@
         ]
       },
       "success": true,
-      "t": 1791997789549,
-      "tid": "104fc979c7f211f195d1b24ed3ecc0bd"
+      "t": 1792014034780,
+      "tid": "e33d3c26c81711f19b78624875bd8c63"
     },
     "status": {
       "result": [
@@ -141,7 +141,7 @@
         },
         {
           "code": "add_ele",
-          "value": 100
+          "value": 49
         },
         {
           "code": "cur_current",
@@ -153,13 +153,13 @@
         },
         {
           "code": "cur_voltage",
-          "value": 2289
+          "value": 2321
         }
       ],
       "success": true,
-      "t": 1791997789361,
-      "tid": "10305682c7f211f199f972feba20a1c4"
+      "t": 1792014034620,
+      "tid": "e320d443c81711f19b78624875bd8c63"
     }
   },
-  "synced_at": "2026-10-14T20:09:48.416715+03:00"
+  "synced_at": "2026-10-15T00:40:33.731237+03:00"
 }

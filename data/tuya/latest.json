@@ -26,10 +26,10 @@
       "value": 0.0
     },
     "cur_voltage": {
-      "raw": 2321,
+      "raw": 2328,
       "scale": 1,
       "unit": "V",
-      "value": 232.1
+      "value": 232.8
     },
     "switch_1": {
       "raw": false,
@@ -54,18 +54,18 @@
         "lon": "",
         "model": "FK-SW102U-BS",
         "name": "Boiler Smart Switch ",
-        "online": false,
+        "online": true,
         "owner_id": "279094361",
         "product_id": "cjbhkic2wnfb2kzp",
         "product_name": "Boiler Smart Switch ",
         "sub": false,
         "time_zone": "+02:00",
-        "update_time": 1792010863,
+        "update_time": 1792051623,
         "uuid": "20415515a4e57cabb4b8"
       },
       "success": true,
-      "t": 1792039070609,
-      "tid": "2dace644c85211f1b47c1ebfec6e4e0a"
+      "t": 1792063685757,
+      "tid": "7d70d713c88b11f1a27dfadfdd3eba79"
     },
     "specification": {
       "result": {
@@ -126,8 +126,8 @@
         ]
       },
       "success": true,
-      "t": 1792039071039,
-      "tid": "2e01ce8cc85211f1972ab24ed3ecc0bd"
+      "t": 1792063686070,
+      "tid": "7db5465ec88b11f1a27dfadfdd3eba79"
     },
     "status": {
       "result": [
@@ -153,13 +153,13 @@
         },
         {
           "code": "cur_voltage",
-          "value": 2321
+          "value": 2328
         }
       ],
       "success": true,
-      "t": 1792039070842,
-      "tid": "2dde5336c85211f1972ab24ed3ecc0bd"
+      "t": 1792063685927,
+      "tid": "7d9b45a6c88b11f1a27dfadfdd3eba79"
     }
   },
-  "synced_at": "2026-10-15T07:37:49.811031+03:00"
+  "synced_at": "2026-10-15T14:28:04.988143+03:00"
 }

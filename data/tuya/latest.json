@@ -60,12 +60,12 @@
         "product_name": "Boiler Smart Switch ",
         "sub": false,
         "time_zone": "+02:00",
-        "update_time": 1792051623,
+        "update_time": 1793172163,
         "uuid": "20415515a4e57cabb4b8"
       },
       "success": true,
-      "t": 1793166079538,
-      "tid": "33581597d29211f1a0f8e64b07df24f2"
+      "t": 1793192025381,
+      "tid": "9c37445bd2ce11f198a8eeae2e40978b"
     },
     "specification": {
       "result": {
@@ -126,8 +126,8 @@
         ]
       },
       "success": true,
-      "t": 1793166080190,
-      "tid": "339a44a1d29211f19bce6ad966f2e3b0"
+      "t": 1793192025733,
+      "tid": "9c89f040d2ce11f19c316ad966f2e3b0"
     },
     "status": {
       "result": [
@@ -157,9 +157,9 @@
         }
       ],
       "success": true,
-      "t": 1793166079703,
-      "tid": "33810399d29211f1a0f8e64b07df24f2"
+      "t": 1793192025562,
+      "tid": "9c6e6a76d2ce11f198a8eeae2e40978b"
     }
   },
-  "synced_at": "2026-10-28T07:41:18.886127+02:00"
+  "synced_at": "2026-10-28T14:53:44.655584+02:00"
 }

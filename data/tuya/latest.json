@@ -2,10 +2,10 @@
   "device_id": "20415515a4e57cabb4b8",
   "normalized_status": {
     "add_ele": {
-      "raw": 44,
+      "raw": 55,
       "scale": 3,
       "unit": "",
-      "value": 0.044
+      "value": 0.055
     },
     "countdown_1": {
       "raw": 0,
@@ -14,22 +14,22 @@
       "value": 0
     },
     "cur_current": {
-      "raw": 0,
+      "raw": 10741,
       "scale": 0,
       "unit": "mA",
-      "value": 0
+      "value": 10741
     },
     "cur_power": {
-      "raw": 0,
+      "raw": 24615,
       "scale": 1,
       "unit": "W",
-      "value": 0.0
+      "value": 2461.5
     },
     "cur_voltage": {
-      "raw": 2337,
+      "raw": 2321,
       "scale": 1,
       "unit": "V",
-      "value": 233.7
+      "value": 232.1
     },
     "switch_1": {
       "raw": false,
@@ -64,8 +64,8 @@
         "uuid": "20415515a4e57cabb4b8"
       },
       "success": true,
-      "t": 1793861090555,
-      "tid": "66138036d8e411f1b92b327538000fce"
+      "t": 1793908569011,
+      "tid": "f1940f85d95211f181352e74adcd76b3"
     },
     "specification": {
       "result": {
@@ -126,8 +126,8 @@
         ]
       },
       "success": true,
-      "t": 1793861091073,
-      "tid": "6693f110d8e411f18921a67b0b4f68cd"
+      "t": 1793908569385,
+      "tid": "f1da67f1d95211f1ba23327538000fce"
     },
     "status": {
       "result": [
@@ -141,25 +141,25 @@
         },
         {
           "code": "add_ele",
-          "value": 44
+          "value": 55
         },
         {
           "code": "cur_current",
-          "value": 0
+          "value": 10741
         },
         {
           "code": "cur_power",
-          "value": 0
+          "value": 24615
         },
         {
           "code": "cur_voltage",
-          "value": 2337
+          "value": 2321
         }
       ],
       "success": true,
-      "t": 1793861090937,
-      "tid": "6659b9b9d8e411f18921a67b0b4f68cd"
+      "t": 1793908569221,
+      "tid": "f1ba4c77d95211f1ba23327538000fce"
     }
   },
-  "synced_at": "2026-11-05T08:44:49.725233+02:00"
+  "synced_at": "2026-11-05T21:56:08.342801+02:00"
 }

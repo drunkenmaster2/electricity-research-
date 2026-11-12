@@ -2,10 +2,10 @@
   "device_id": "20415515a4e57cabb4b8",
   "normalized_status": {
     "add_ele": {
-      "raw": 98,
+      "raw": 6,
       "scale": 3,
       "unit": "",
-      "value": 0.098
+      "value": 0.006
     },
     "countdown_1": {
       "raw": 0,
@@ -64,8 +64,8 @@
         "uuid": "20415515a4e57cabb4b8"
       },
       "success": true,
-      "t": 1794496422674,
-      "tid": "a59e5656deab11f189e7aa3b86ba43e6"
+      "t": 1794526697753,
+      "tid": "23033f3cdef211f1a048de1697ef25ef"
     },
     "specification": {
       "result": {
@@ -126,8 +126,8 @@
         ]
       },
       "success": true,
-      "t": 1794496423130,
-      "tid": "a5fa78badeab11f19fd7de1697ef25ef"
+      "t": 1794526698118,
+      "tid": "234bead5def211f1a048de1697ef25ef"
     },
     "status": {
       "result": [
@@ -141,7 +141,7 @@
         },
         {
           "code": "add_ele",
-          "value": 98
+          "value": 6
         },
         {
           "code": "cur_current",
@@ -157,9 +157,9 @@
         }
       ],
       "success": true,
-      "t": 1794496422925,
-      "tid": "a5d410f2deab11f1b378420ab531490d"
+      "t": 1794526697962,
+      "tid": "232c428ddef211f18a3faa3b86ba43e6"
     }
   },
-  "synced_at": "2026-11-12T17:13:41.872391+02:00"
+  "synced_at": "2026-11-13T01:38:17.062172+02:00"
 }
